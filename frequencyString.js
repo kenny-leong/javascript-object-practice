@@ -24,7 +24,6 @@ function removeDuplicates(arr1) {
   }
 
 const mostCommonChar = sentence => {
-    let obj = {};
     let lowerSentence = sentence.toLowerCase()
     let letterList = lowerSentence.split('');
     let uniqueLetters = removeDuplicates(letterList)
