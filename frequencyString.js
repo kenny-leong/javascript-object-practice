@@ -32,15 +32,17 @@ const mostCommonChar = sentence => {
     let highestFrequency = 0;
     let index = -1;
 
+    //sort the unique letters alphabetically
     uniqueLetters = uniqueLetters.sort();
 
+    //removes all spaces from sentence
     for (i=0;i<letterList.length;i++) {
         if (letterList[i] === ' ') {
             letterList.splice(i,1);
         }
     }
 
-
+    //counts all the frequencies and pushes to array "count"
     for (i=0;i<uniqueLetters.length;i++) {
         let currentCount = 0;
         let counting = true;
@@ -57,6 +59,7 @@ const mostCommonChar = sentence => {
         }
     }
 
+    //finds index of the highest frequency and picks it lexicographically
     for (i=0;i<count.length;i++) {
         if (count[i]>highestFrequency) {
             highestFrequency = count[i];
